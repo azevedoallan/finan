@@ -1,0 +1,15 @@
+{
+    "name": "azval/finan",
+    "authors": [
+        {
+            "name": "Allan Azevedo",
+            "email": "azevedoallan3@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "SONFin\\": "src/"
+        }
+    }
+}
