@@ -6,7 +6,9 @@
             "email": "azevedoallan3@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "robmorgan/phinx": "0.10.8"
+    },
     "autoload": {
         "psr-4": {
             "SONFin\\": "src/"
