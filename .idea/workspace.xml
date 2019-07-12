@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2bed5cb1-f05b-4ea7-b0e5-adf096df448f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/db/migrations/20190712014529_create_category_costs.php" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrations/20190712014529_create_category_costs.php" afterDir="false" />
-    </list>
+    <list default="true" id="2bed5cb1-f05b-4ea7-b0e5-adf096df448f" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,11 +34,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/migrations/20190712014529_create_category_costs.php">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/db/seeds/CategoryCostsSeeder.php">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
-              <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+              <caret line="18" column="35" lean-forward="true" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -62,6 +69,7 @@
         <option value="$PROJECT_DIR$/config/db.php" />
         <option value="$PROJECT_DIR$/phinx.php" />
         <option value="$PROJECT_DIR$/db/migrations/20190712014529_create_category_costs.php" />
+        <option value="$PROJECT_DIR$/db/seeds/CategoryCostsSeeder.php" />
       </list>
     </option>
   </component>
@@ -87,7 +95,7 @@
       <path value="$PROJECT_DIR$/vendor/robmorgan/phinx" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="85" />
     <option name="y" value="61" />
     <option name="width" value="1750" />
@@ -116,6 +124,12 @@
               <item name="finan" type="462c0819:PsiDirectoryNode" />
               <item name="db" type="462c0819:PsiDirectoryNode" />
               <item name="migrations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="finan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="finan" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
+              <item name="seeds" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -151,18 +165,18 @@
       <option name="presentableId" value="Default" />
       <updated>1562726144114</updated>
       <workItem from="1562726146568" duration="1418000" />
-      <workItem from="1562812529084" duration="7772000" />
+      <workItem from="1562812529084" duration="9252000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9190000" />
+    <option name="totallyTimeSpent" value="10670000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="23" width="1550" height="848" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22818792" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22818792" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -226,8 +240,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrations/20190712014529_create_category_costs.php">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/seeds/CategoryCostsSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
-          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+          <caret line="18" column="35" lean-forward="true" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
         </state>
       </provider>
     </entry>
