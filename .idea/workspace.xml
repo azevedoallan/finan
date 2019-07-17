@@ -1,10 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2bed5cb1-f05b-4ea7-b0e5-adf096df448f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ServiceContainerInterface.php" afterDir="false" />
+    <list default="true" id="2bed5cb1-f05b-4ea7-b0e5-adf096df448f" name="Default Changelist" comment="Implementando container">
+      <change afterPath="$PROJECT_DIR$/src/ServiceContainer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/container-interop/container-interop/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/container-interop/container-interop/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/container-interop/container-interop/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/container-interop/container-interop/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/container-interop/container-interop/docs/ContainerInterface-meta.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/container-interop/container-interop/docs/ContainerInterface.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/container-interop/container-interop/docs/Delegate-lookup-meta.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/container-interop/container-interop/docs/Delegate-lookup.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/container-interop/container-interop/docs/images/interoperating_containers.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/container-interop/container-interop/docs/images/priority.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/container-interop/container-interop/docs/images/side_by_side_containers.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/container-interop/container-interop/src/Interop/Container/ContainerInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/container-interop/container-interop/src/Interop/Container/Exception/ContainerException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/container-interop/container-interop/src/Interop/Container/Exception/NotFoundException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/pimple/pimple/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/pimple/pimple/.travis.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/pimple/pimple/CHANGELOG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/pimple/pimple/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/pimple/pimple/README.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/pimple/pimple/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/pimple/pimple/ext/pimple/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/pimple/pimple/ext/pimple/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/pimple/pimple/ext/pimple/config.m4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/pimple/pimple/ext/pimple/config.w32" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/pimple/pimple/ext/pimple/php_pimple.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/pimple/pimple/ext/pimple/pimple.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/pimple/pimple/ext/pimple/pimple_compat.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/pimple/pimple/ext/pimple/tests/001.phpt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/pimple/pimple/ext/pimple/tests/002.phpt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/pimple/pimple/ext/pimple/tests/003.phpt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/pimple/pimple/ext/pimple/tests/004.phpt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/pimple/pimple/ext/pimple/tests/005.phpt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/pimple/pimple/ext/pimple/tests/006.phpt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/pimple/pimple/ext/pimple/tests/007.phpt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/pimple/pimple/ext/pimple/tests/008.phpt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/pimple/pimple/ext/pimple/tests/009.phpt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/pimple/pimple/ext/pimple/tests/010.phpt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/pimple/pimple/ext/pimple/tests/011.phpt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/pimple/pimple/ext/pimple/tests/012.phpt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/pimple/pimple/ext/pimple/tests/013.phpt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/pimple/pimple/ext/pimple/tests/014.phpt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/pimple/pimple/ext/pimple/tests/015.phpt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/pimple/pimple/ext/pimple/tests/016.phpt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/pimple/pimple/ext/pimple/tests/017.phpt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/pimple/pimple/ext/pimple/tests/017_1.phpt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/pimple/pimple/ext/pimple/tests/018.phpt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/pimple/pimple/ext/pimple/tests/019.phpt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/pimple/pimple/ext/pimple/tests/bench.phpb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/pimple/pimple/ext/pimple/tests/bench_shared.phpb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/pimple/pimple/phpunit.xml.dist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/pimple/pimple/src/Pimple/Container.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/pimple/pimple/src/Pimple/Exception/ExpectedInvokableException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/pimple/pimple/src/Pimple/Exception/FrozenServiceException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/pimple/pimple/src/Pimple/Exception/InvalidServiceIdentifierException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/pimple/pimple/src/Pimple/Exception/UnknownIdentifierException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/pimple/pimple/src/Pimple/Psr11/Container.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/pimple/pimple/src/Pimple/Psr11/ServiceLocator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/pimple/pimple/src/Pimple/ServiceIterator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/pimple/pimple/src/Pimple/ServiceProviderInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/pimple/pimple/src/Pimple/Tests/Fixtures/Invokable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/pimple/pimple/src/Pimple/Tests/Fixtures/NonInvokable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/pimple/pimple/src/Pimple/Tests/Fixtures/PimpleServiceProvider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/pimple/pimple/src/Pimple/Tests/Fixtures/Service.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/pimple/pimple/src/Pimple/Tests/PimpleServiceProviderInterfaceTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/pimple/pimple/src/Pimple/Tests/PimpleTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/pimple/pimple/src/Pimple/Tests/Psr11/ContainerTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/pimple/pimple/src/Pimple/Tests/Psr11/ServiceLocatorTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/pimple/pimple/src/Pimple/Tests/ServiceIteratorTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/psr/container/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/psr/container/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/psr/container/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/psr/container/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/psr/container/src/ContainerExceptionInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/psr/container/src/ContainerInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/psr/container/src/NotFoundExceptionInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xtreamwayz/pimple-container-interop/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xtreamwayz/pimple-container-interop/.travis.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xtreamwayz/pimple-container-interop/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xtreamwayz/pimple-container-interop/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xtreamwayz/pimple-container-interop/phpcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xtreamwayz/pimple-container-interop/phpunit.xml.dist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xtreamwayz/pimple-container-interop/src/Container.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xtreamwayz/pimple-container-interop/src/Exception/ContainerException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xtreamwayz/pimple-container-interop/src/Exception/NotFoundException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/xtreamwayz/pimple-container-interop/tests/ContainerTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/finan.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/finan.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,7 +116,7 @@
         <entry file="file://$PROJECT_DIR$/db/seeds/CategoryCostsSeeder.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
-              <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+              <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -33,16 +125,25 @@
         <entry file="file://$PROJECT_DIR$/migrate-seed.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="51">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ServiceContainerInterface.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ServiceContainerInterface.php">
+        <entry file="file://$PROJECT_DIR$/src/ServiceContainer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+            <state relative-caret-position="149">
+              <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -51,7 +152,7 @@
         <entry file="file://$PROJECT_DIR$/db/migrations/20190712014529_create_category_costs.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
-              <caret line="12" column="21" lean-forward="true" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+              <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -76,6 +177,7 @@
         <option value="$PROJECT_DIR$/db/seeds/CategoryCostsSeeder.php" />
         <option value="$PROJECT_DIR$/migrate-seed.php" />
         <option value="$PROJECT_DIR$/src/ServiceContainerInterface.php" />
+        <option value="$PROJECT_DIR$/src/ServiceContainer.php" />
       </list>
     </option>
   </component>
@@ -100,6 +202,10 @@
       <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
       <path value="$PROJECT_DIR$/vendor/robmorgan/phinx" />
       <path value="$PROJECT_DIR$/vendor/fzaninotto/faker" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/pimple/pimple" />
+      <path value="$PROJECT_DIR$/vendor/xtreamwayz/pimple-container-interop" />
+      <path value="$PROJECT_DIR$/vendor/container-interop/container-interop" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
@@ -161,20 +267,21 @@
       <updated>1562726144114</updated>
       <workItem from="1562726146568" duration="1418000" />
       <workItem from="1562812529084" duration="9405000" />
-      <workItem from="1563242636280" duration="4264000" />
+      <workItem from="1563242636280" duration="5799000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15087000" />
+    <option name="totallyTimeSpent" value="16622000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="706" y="46" width="834" height="796" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2751938" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.2751938" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24966443" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Messages" visible="true" weight="0.3298193" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -195,6 +302,10 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Implementando container" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementando container" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -233,21 +344,21 @@
     <entry file="file://$PROJECT_DIR$/db/seeds/CategoryCostsSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
-          <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+          <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrations/20190712014529_create_category_costs.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="12" column="21" lean-forward="true" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+          <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/migrate-seed.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
@@ -260,8 +371,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ServiceContainerInterface.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+        <state relative-caret-position="255">
+          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/xtreamwayz/pimple-container-interop/src/Container.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-255">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/pimple/pimple/phpunit.xml.dist">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="40" selection-start-line="3" selection-start-column="40" selection-end-line="3" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ServiceContainer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
         </state>
       </provider>
     </entry>

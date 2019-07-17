@@ -15,6 +15,10 @@ class ComposerStaticInitfb2ffa5aa669307d2e83882b8b267ea6
     );
 
     public static $prefixLengthsPsr4 = array (
+        'X' => 
+        array (
+            'Xtreamwayz\\Pimple\\' => 18,
+        ),
         'S' => 
         array (
             'Symfony\\Polyfill\\Mbstring\\' => 26,
@@ -30,7 +34,12 @@ class ComposerStaticInitfb2ffa5aa669307d2e83882b8b267ea6
         array (
             'Psr\\SimpleCache\\' => 16,
             'Psr\\Log\\' => 8,
+            'Psr\\Container\\' => 14,
             'Phinx\\' => 6,
+        ),
+        'I' => 
+        array (
+            'Interop\\Container\\' => 18,
         ),
         'F' => 
         array (
@@ -49,6 +58,10 @@ class ComposerStaticInitfb2ffa5aa669307d2e83882b8b267ea6
     );
 
     public static $prefixDirsPsr4 = array (
+        'Xtreamwayz\\Pimple\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/xtreamwayz/pimple-container-interop/src',
+        ),
         'Symfony\\Polyfill\\Mbstring\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
@@ -89,9 +102,17 @@ class ComposerStaticInitfb2ffa5aa669307d2e83882b8b267ea6
         array (
             0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
         ),
+        'Psr\\Container\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/container/src',
+        ),
         'Phinx\\' => 
         array (
             0 => __DIR__ . '/..' . '/robmorgan/phinx/src/Phinx',
+        ),
+        'Interop\\Container\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/container-interop/container-interop/src/Interop/Container',
         ),
         'Faker\\' => 
         array (
@@ -127,11 +148,22 @@ class ComposerStaticInitfb2ffa5aa669307d2e83882b8b267ea6
         ),
     );
 
+    public static $prefixesPsr0 = array (
+        'P' => 
+        array (
+            'Pimple' => 
+            array (
+                0 => __DIR__ . '/..' . '/pimple/pimple/src',
+            ),
+        ),
+    );
+
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInitfb2ffa5aa669307d2e83882b8b267ea6::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInitfb2ffa5aa669307d2e83882b8b267ea6::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitfb2ffa5aa669307d2e83882b8b267ea6::$prefixesPsr0;
 
         }, null, ClassLoader::class);
     }
