@@ -17,6 +17,7 @@ return array(
     'SONFin\\' => array($baseDir . '/src'),
     'Psr\\SimpleCache\\' => array($vendorDir . '/psr/simple-cache/src'),
     'Psr\\Log\\' => array($vendorDir . '/psr/log/Psr/Log'),
+    'Psr\\Http\\Message\\' => array($vendorDir . '/psr/http-message/src'),
     'Psr\\Container\\' => array($vendorDir . '/psr/container/src'),
     'Phinx\\' => array($vendorDir . '/robmorgan/phinx/src/Phinx'),
     'Interop\\Container\\' => array($vendorDir . '/container-interop/container-interop/src/Interop/Container'),
@@ -28,4 +29,5 @@ return array(
     'Cake\\Core\\' => array($vendorDir . '/cakephp/core'),
     'Cake\\Collection\\' => array($vendorDir . '/cakephp/collection'),
     'Cake\\Cache\\' => array($vendorDir . '/cakephp/cache'),
+    'Aura\\Router\\' => array($vendorDir . '/aura/router/src'),
 );

@@ -34,6 +34,7 @@ class ComposerStaticInitfb2ffa5aa669307d2e83882b8b267ea6
         array (
             'Psr\\SimpleCache\\' => 16,
             'Psr\\Log\\' => 8,
+            'Psr\\Http\\Message\\' => 17,
             'Psr\\Container\\' => 14,
             'Phinx\\' => 6,
         ),
@@ -54,6 +55,10 @@ class ComposerStaticInitfb2ffa5aa669307d2e83882b8b267ea6
             'Cake\\Core\\' => 10,
             'Cake\\Collection\\' => 16,
             'Cake\\Cache\\' => 11,
+        ),
+        'A' => 
+        array (
+            'Aura\\Router\\' => 12,
         ),
     );
 
@@ -102,6 +107,10 @@ class ComposerStaticInitfb2ffa5aa669307d2e83882b8b267ea6
         array (
             0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
         ),
+        'Psr\\Http\\Message\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/http-message/src',
+        ),
         'Psr\\Container\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/container/src',
@@ -145,6 +154,10 @@ class ComposerStaticInitfb2ffa5aa669307d2e83882b8b267ea6
         'Cake\\Cache\\' => 
         array (
             0 => __DIR__ . '/..' . '/cakephp/cache',
+        ),
+        'Aura\\Router\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/aura/router/src',
         ),
     );
 
