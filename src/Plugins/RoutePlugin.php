@@ -24,12 +24,12 @@ class RoutePlugin implements PluginInterface
         $matcher = $routerContainer->getMatcher();
         /* tem a função de gerar links com base nas rotas registradas */
         $generator = $routerContainer->getGenerator();
-        $request = $this->getRequest()
+        $request = $this->getRequest();
 
 
         $container->add('routing', $map);
         $container->add('routing.matcher', $matcher);
-        $container->add('routing.generador', $generator);
+        $container->add('routing.generator', $generator);
         $container->add(RequestInterface::class, $request);
         $container->addLazy('route', function (ContainerInterface $container) {
             $matcher = $container->get('routing.matcher');
