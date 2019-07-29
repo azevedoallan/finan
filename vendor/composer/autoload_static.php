@@ -170,6 +170,13 @@ class ComposerStaticInitfb2ffa5aa669307d2e83882b8b267ea6
     );
 
     public static $prefixesPsr0 = array (
+        'T' => 
+        array (
+            'Twig_' => 
+            array (
+                0 => __DIR__ . '/..' . '/twig/twig/lib',
+            ),
+        ),
         'P' => 
         array (
             'Pimple' => 
