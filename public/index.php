@@ -32,7 +32,7 @@ $app->get('/category-costs', function () use ($app) {
     return $view->render('category-costs/list.html.twig', [
         'categories' => $categories
     ]);
-    
+
 });
 
 $app->start();
