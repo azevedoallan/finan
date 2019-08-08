@@ -28,21 +28,32 @@ class DefaultRepository implements RepositoryInterface
 
     public function all(): array
     {
-        // TODO: Implement all() method.
+        return  $this->model->all()->toArray();
     }
 
     public function create(array $data)
     {
-        // TODO: Implement create() method.
+        $this->model->fill($data);
+        $this->model->save();
+        return $this->model;
     }
 
     public function update(int $id, array $data)
     {
-        // TODO: Implement update() method.
+        $model = $this->find($id);
+        $model->fill($data);
+        $model->save();
+        return $this->model;
     }
 
     public function delete(int $id)
     {
-        // TODO: Implement delete() method.
+        $model = $this->find($id);
+        $model->delete();
+    }
+
+    public function find(int $id)
+    {
+        return $this->model->findOrFail($id);
     }
 }
