@@ -1,7 +1,7 @@
 <?php
 
 
-namespace SON\Auth;
+namespace SONFin\Auth;
 
 
 class Auth implements AuthInterface

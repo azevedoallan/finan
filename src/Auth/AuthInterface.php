@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace SON\Auth;
+namespace SONFin\Auth;
 
 
 interface AuthInterface
