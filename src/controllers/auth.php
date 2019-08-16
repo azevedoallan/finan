@@ -9,10 +9,13 @@ $app
         return $view->render('auth/login.html.twig');
     }, 'auth.show_login_form')
     ->post('/login', function (ServerRequestInterface $request) use ($app) {
-        $app->service('auth')->login();
-        /*
+        $view = $app->service('view.renderer');
+        $auth = $app->service('auth');
         $data = $request->getParsedBody();
-        $repository = $app->service('category-cost.repository');
-        $repository->create($data);
-        return $app->route('category-costs.list'); */
+        $result = $auth->login($data);
+        if (!$result) {
+
+            return $view->render('auth/login.html.twig');
+        }
+        return $app->route('category-costs.list');
     }, 'auth.login');

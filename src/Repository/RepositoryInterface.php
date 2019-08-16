@@ -11,6 +11,6 @@ interface RepositoryInterface
     public function create(array $data);
     public function update(int $id , array $data);
     public function delete(int $id);
-    public function findByField(string $field, $value): array;
+    public function findByField(string $field, $value);
 
 }
