@@ -10,6 +10,7 @@ use SONFin\Repository\RepositoryInterface;
 
 class JasnyAuth extends \Jasny\Auth
 {
+    use Sessions;
     /**
      * @var RepositoryInterface
      */
@@ -21,7 +22,6 @@ class JasnyAuth extends \Jasny\Auth
         $this->repository = $repository;
     }
 
-    use Sessions;
 
     /**
      * Fetch a user by ID
