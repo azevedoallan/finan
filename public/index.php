@@ -20,13 +20,6 @@ $app->plugin(new DbPlugin());
 $app->plugin(new AuthPlugin());
 
 
-$app
-    ->get('/home/{name}/{id}', function (ServerRequestInterface $request) {
-        $response = new \Zend\Diactoros\Response();
-        $response->getBody()->write("response com emitter do diactoros");
-        return $response;
-    });
-
 require_once __DIR__. '/../src/controllers/category-costs.php';
 require_once __DIR__. '/../src/controllers/users.php';
 require_once __DIR__. '/../src/controllers/auth.php';
