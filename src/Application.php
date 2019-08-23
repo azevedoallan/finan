@@ -84,7 +84,6 @@ class Application
                 return $result;
             }
         }
-
         return null;
     }
 
