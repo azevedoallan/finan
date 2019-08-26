@@ -156,7 +156,7 @@ class Util
      * Check if a migration/seed class name is valid.
      *
      * Migration & Seed class names must be in CamelCase format.
-     * e.g: CreateUserTable, AddIndexToPostsTable or UserSeeder.
+     * e.g: CreateUserTable, AddIndexToPostsTable or UsersSeeder.
      *
      * Single words are not allowed on their own.
      *

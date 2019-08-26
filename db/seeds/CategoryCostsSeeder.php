@@ -5,6 +5,19 @@ use Phinx\Seed\AbstractSeed;
 
 class CategoryCostsSeeder extends AbstractSeed
 {
+    const NAMES = [
+        'Telefone',
+        'Água',
+        'Escola',
+        'Cartão',
+        'LUZ',
+        'IPVA',
+        'Imposto de Renda',
+        'Gasolina',
+        'Vestuário',
+        'Entretenimento',
+        'Reparos'
+    ];
     /**
      * Run Method.
      *
@@ -16,11 +29,13 @@ class CategoryCostsSeeder extends AbstractSeed
     public function run()
     {
           $faker = \Faker\Factory::create();
+          $faker->addProvider($this);
           $data = [];
-          foreach (range(1, 10) as $value) {
+          foreach (range(1, 20) as $value) {
               $data[] =
                   [
-                      'name' => $faker->name,
+                      'name' => $faker->categoryName(),
+                      'user_id' => rand(1,4),
                       'created_at' => date('Y-m-d H:i:s'),
                       'updated_at' => date('Y-m-d H:i:s')
                   ];
@@ -29,5 +44,10 @@ class CategoryCostsSeeder extends AbstractSeed
 
           $categoryCosts = $this-> table('category_costs');
           $categoryCosts ->insert($data)->save();
+    }
+
+    public function categoryName()
+    {
+        return \Faker\Provider\Base::randomElement(self::NAMES);
     }
 }

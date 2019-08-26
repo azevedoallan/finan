@@ -10,7 +10,7 @@ class CreateCategoryCosts extends AbstractMigration
            -> addColumn('name', 'string')
            -> addColumn('created_at', 'datetime')
            -> addColumn('updated_at', 'datetime')
-           -> save();
+           -> create();
     }
 
     public function down()

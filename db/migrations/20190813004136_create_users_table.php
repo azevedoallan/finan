@@ -14,11 +14,11 @@ class CreateUsersTable extends AbstractMigration
            ->addColumn('created_at','datetime')
            ->addColumn('updated_at','datetime')
            ->addIndex(['email'],['unique' => true])
-           ->save();
+           ->create();
    }
 
    public function down()
    {
-        $this->table('users')->drop()->save();
+       $this->table('users')->drop()->save();
    }
 }
