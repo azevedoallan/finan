@@ -7,7 +7,8 @@ $app
     ->get('/category-costs', function () use ($app) {
         $view = $app->service('view.renderer');
         $repository = $app->service('category-cost.repository');
-        $categories = $repository->all();
+        $auth = $app->service('auth');
+        $categories = $repository->findByField('user_id', $auth->user()->getId());
         return $view->render('category-costs/list.html.twig', [
             'categories' => $categories
         ]);
@@ -19,6 +20,8 @@ $app
     ->post('/category-costs/store', function (ServerRequestInterface $request) use ($app) {
         $data = $request->getParsedBody();
         $repository = $app->service('category-cost.repository');
+        $auth = $app->service('auth');
+        $data['user_id'] = $auth->user()->getId();
         $repository->create($data);
         return $app->route('category-costs.list');
     }, 'category-costs.store')
@@ -26,7 +29,11 @@ $app
         $view = $app->service('view.renderer');
         $repository = $app->service('category-cost.repository');
         $id = $request->getAttribute('id');
-        $category = $repository->find($id);
+        $auth = $app->service('auth');
+        $category = $repository->findOneBy([
+            'id' => $id,
+            'user_id' => $auth->user()->getId()
+        ]);
         return $view->render('category-costs/edit.html.twig', [
             'category' => $category
         ]);
@@ -35,6 +42,12 @@ $app
         $repository = $app->service('category-cost.repository');
         $id = $request->getAttribute('id');
         $data = $request->getParsedBody();
+        $auth = $app->service('auth');
+        $data['user_id'] = $auth->user()->getId();
+        $repository->update([
+            'id' => $id,
+            'user_id' => $auth->user()->getId()
+        ], $data);
         $repository->update($id, $data);
         return $app->route('category-costs.list');
     }, 'category-costs.update')
@@ -42,7 +55,11 @@ $app
         $repository = $app->service('category-cost.repository');
         $view = $app->service('view.renderer');
         $id = $request->getAttribute('id');
-        $category = $repository->find($id);
+        $auth = $app->service('auth');
+        $category = $repository->findOneBy([
+            'id' => $id,
+            'user_id' => $auth->user()->getId()
+        ]);
         return $view->render('category-costs/show.html.twig', [
             'category' => $category
         ]);
@@ -50,6 +67,10 @@ $app
     ->get('/category-costs/{id}/delete', function (ServerRequestInterface $request) use ($app) {
         $repository = $app->service('category-cost.repository');
         $id = $request->getAttribute('id');
-        $repository->delete($id);
+        $auth = $app->service('auth');
+        $repository->delete([
+            'id' => $id,
+            'user_id' => $auth->user()->getId()
+        ]);
         return $app->route('category-costs.list');
     }, 'category-costs.delete');
