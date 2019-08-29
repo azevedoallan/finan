@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace SONFin\Plugins;
 
 use Psr\Container\ContainerInterface;
+use SONFin\Models\BillReceive;
 use SONFin\Models\CategoryCost;
 use SONFin\Models\User;
 use SONFin\Repository\RepositoryFactory;
@@ -26,6 +27,11 @@ class DbPlugin implements PluginInterface
         $container->addLazy('category-cost.repository', function (ContainerInterface $container) {
             return $container->get('repository.factory')->factory(CategoryCost::class);
         });
+
+        $container->addLazy('bill-receive.repository', function (ContainerInterface $container) {
+            return $container->get('repository.factory')->factory(BillReceive::class);
+        });
+
         $container->addLazy('user.repository', function (ContainerInterface $container) {
             return $container->get('repository.factory')->factory(User::class);
         });
