@@ -8,9 +8,9 @@ $app
         $view = $app->service('view.renderer');
         $repository = $app->service('bill-receive.repository');
         $auth = $app->service('auth');
-        $categories = $repository->findByField('user_id', $auth->user()->getId());
+        $bills = $repository->findByField('user_id', $auth->user()->getId());
         return $view->render('bill-receives/list.html.twig', [
-            'categories' => $categories
+            'bills' => $bills
         ]);
     }, 'bill-receives.list')
     ->get('/bill-receives/new', function () use ($app) {
@@ -22,6 +22,8 @@ $app
         $repository = $app->service('bill-receive.repository');
         $auth = $app->service('auth');
         $data['user_id'] = $auth->user()->getId();
+        $data['date_launch'] = dateParse($data['date_launch']);
+        $data['value'] = numberParse($data['value']);
         $repository->create($data);
         return $app->route('bill-receives.list');
     }, 'bill-receives.store')
@@ -30,12 +32,12 @@ $app
         $repository = $app->service('bill-receive.repository');
         $id = $request->getAttribute('id');
         $auth = $app->service('auth');
-        $category = $repository->findOneBy([
+        $bill = $repository->findOneBy([
             'id' => $id,
             'user_id' => $auth->user()->getId()
         ]);
         return $view->render('bill-receives/edit.html.twig', [
-            'category' => $category
+            'bill' => $bill
         ]);
     }, 'bill-receives.edit')
     ->post('/bill-receives/{id}/update', function (ServerRequestInterface $request) use ($app) {
@@ -44,6 +46,8 @@ $app
         $data = $request->getParsedBody();
         $auth = $app->service('auth');
         $data['user_id'] = $auth->user()->getId();
+        $data['date_launch'] = dateParse($data['date_launch']);
+        $data['value'] = numberParse($data['value']);
         $repository->update([
             'id' => $id,
             'user_id' => $auth->user()->getId()
@@ -56,12 +60,12 @@ $app
         $view = $app->service('view.renderer');
         $id = $request->getAttribute('id');
         $auth = $app->service('auth');
-        $category = $repository->findOneBy([
+        $bill = $repository->findOneBy([
             'id' => $id,
             'user_id' => $auth->user()->getId()
         ]);
         return $view->render('bill-receives/show.html.twig', [
-            'category' => $category
+            'bill' => $bill
         ]);
     }, 'bill-receives.show')
     ->get('/bill-receives/{id}/delete', function (ServerRequestInterface $request) use ($app) {

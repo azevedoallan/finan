@@ -10,6 +10,7 @@ use SONFin\ServiceContainer;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
+require_once __DIR__ . '/../src/helpers.php';
 
 $serviceContainer = new ServiceContainer();
 $app = new Application($serviceContainer);
