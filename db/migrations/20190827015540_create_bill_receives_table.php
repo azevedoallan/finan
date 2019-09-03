@@ -17,7 +17,7 @@ class CreateBillReceivesTable extends AbstractMigration
             ->create();
     }
 
-    protected function down()
+    public function down()
     {
         $this->table('bill_receives')->drop()->save();
     }

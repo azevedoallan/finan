@@ -19,7 +19,7 @@ class CreateBillPaysTable extends AbstractMigration
             ->create();
     }
 
-    protected function down()
+    public function down()
     {
         $this->table('bill_pays')->drop()->save();
     }
