@@ -3,6 +3,7 @@
 
 namespace SONFin\Repository;
 
+use Illuminate\Database\Eloquent\Model;
 
 class DefaultRepository implements RepositoryInterface
 {
