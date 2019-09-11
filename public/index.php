@@ -22,6 +22,7 @@ $app->plugin(new AuthPlugin());
 
 
 
+require_once __DIR__. '/../src/controllers/charts.php';
 require_once __DIR__. '/../src/controllers/statements.php';
 require_once __DIR__. '/../src/controllers/category-costs.php';
 require_once __DIR__. '/../src/controllers/bill-receives.php';

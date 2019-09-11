@@ -25,9 +25,12 @@ class CategoryCostRepository extends DefaultRepository implements CategoryCostRe
         $categories = CategoryCost::query()
             ->selectRaw('category_costs.name, sum(value) as value')
             ->leftJoin('bill_pays', 'bill_pays.category_cost_id', '=', 'category_costs.id')
+            ->whereBetween('date_launch', [$dateStart, $dateEnd])
             ->where('category_costs.user_id', $userId)
+            ->whereNotNull('bill_pays.category_cost_id')
             ->groupBy('value')
-            ->groupBy('category_costs.name');
+            ->groupBy('category_costs.name')
+            ->get();
         return $categories->toArray();
     }
 }
