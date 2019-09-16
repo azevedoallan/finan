@@ -64,6 +64,7 @@ class ComposerStaticInitfb2ffa5aa669307d2e83882b8b267ea6
         ),
         'D' => 
         array (
+            'Dotenv\\' => 7,
             'Doctrine\\Common\\Inflector\\' => 26,
         ),
         'C' => 
@@ -178,6 +179,10 @@ class ComposerStaticInitfb2ffa5aa669307d2e83882b8b267ea6
         'Faker\\' => 
         array (
             0 => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker',
+        ),
+        'Dotenv\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/vlucas/phpdotenv/src',
         ),
         'Doctrine\\Common\\Inflector\\' => 
         array (
