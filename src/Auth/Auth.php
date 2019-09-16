@@ -16,6 +16,7 @@ class Auth implements AuthInterface
 
     /**
      * Auth constructor.
+     *
      * @param JasnyAuth $jasnyAuth
      */
     public function __construct(JasnyAuth $jasnyAuth)

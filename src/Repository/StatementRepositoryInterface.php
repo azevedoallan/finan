@@ -6,7 +6,7 @@ namespace SONFin\Repository;
 
 interface StatementRepositoryInterface
 {
-    public function all(string $dateStart, string $dateEnd, $userId ): array ;
+    public function all(string $dateStart, string $dateEnd, $userId ): array;
 
 
 }

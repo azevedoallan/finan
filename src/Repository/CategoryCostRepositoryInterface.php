@@ -6,7 +6,7 @@ namespace SONFin\Repository;
 
 interface CategoryCostRepositoryInterface
 {
-    public function sumByPeriod(string $dateStart, string $dateEnd, $userId ): array ;
+    public function sumByPeriod(string $dateStart, string $dateEnd, $userId ): array;
 
 
 }

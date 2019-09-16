@@ -19,6 +19,7 @@ class DefaultRepository implements RepositoryInterface
 
     /**
      * DefaultRepository constructor.
+     *
      * @param string $modelClass
      */
     public function __construct(string $modelClass)

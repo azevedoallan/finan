@@ -18,6 +18,7 @@ class Application
 
     /**
      * Application constructor.
+     *
      * @param $serviceContainer
      */
     public function __construct(ServiceContainerInterface $serviceContainer)
@@ -58,7 +59,7 @@ class Application
         return $this;
     }
 
-    public function redirect($path):ResponseInterface
+    public function redirect($path): ResponseInterface
     {
         return new RedirectResponse($path);
     }
@@ -70,7 +71,7 @@ class Application
         return $this->redirect($path);
     }
 
-    public function before(callable $callback):Application
+    public function before(callable $callback): Application
     {
         array_push($this->befores, $callback);
         return $this;
@@ -87,10 +88,12 @@ class Application
         return null;
     }
 
-    public function start() :void
+    public function start(): void
     {
         $route = $this->service('route');
-        /** @var ServerRequestInterface $request */
+        /**
+         * @var ServerRequestInterface $request
+         */
         $request = $this->service(RequestInterface::class);
 
         if (!$route) {
@@ -104,8 +107,8 @@ class Application
 
         $result = $this->runBefores();
         if ($result) {
-           $this->emitResponse($result);
-           return;
+            $this->emitResponse($result);
+            return;
         }
 
         $callable = $route->handler;
@@ -113,7 +116,7 @@ class Application
         $this->emitResponse($response);
     }
 
-    protected function emitResponse(ResponseInterface $response):void
+    protected function emitResponse(ResponseInterface $response): void
     {
         $emitter = new SapiEmitter();
         $emitter->emit($response);

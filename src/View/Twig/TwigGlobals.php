@@ -16,6 +16,7 @@ class TwigGlobals extends \Twig_Extension implements \Twig_Extension_GlobalsInte
 
     /**
      * TwigGlobals constructor.
+     *
      * @param AuthInterface $auth
      */
     public function __construct(AuthInterface $auth)

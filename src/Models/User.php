@@ -24,7 +24,7 @@ class User extends Model implements JasnyUser, UserInterface
      */
     public function getId():int
     {
-       return (int)$this->id;
+        return (int)$this->id;
     }
 
     /**
