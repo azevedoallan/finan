@@ -2,11 +2,11 @@ Gerenciador de finanças
 
 __Requisitos:__
 
-> PHP 7+
+1. PHP 7+
 
-> Composer
+1 Composer
 
-> Mysql
+1 Mysql
 
 
 Instalação:
