@@ -1,6 +1,6 @@
 Gerenciador de finanças
 
-__Requisitos__
+__Requisitos:__
 
 > PHP 7+
 
