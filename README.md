@@ -1,6 +1,6 @@
 ## Gerenciador de finanças
 
-__Requisitos:__
+__Requisitos:__<br>
 
 1. PHP 7+
 
@@ -9,7 +9,8 @@ __Requisitos:__
 3. Mysql
 
 
-__Instalação:__
+
+<br>__Instalação:__ 
 
 
 *1. clone o repositorio com*
