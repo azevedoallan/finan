@@ -1,6 +1,15 @@
-<b>Gerenciador de finanças</b>
+Gerenciador de finanças
 
-Instalação
+__Requisitos__
+
+> PHP 7+
+
+> Composer
+
+> Mysql
+
+
+Instalação:
 
 
 1. clone o repositorio com
