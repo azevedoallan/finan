@@ -2,14 +2,14 @@
 
 __Requisitos:__
 
-3. PHP 7+
+1. PHP 7+
 
 2. Composer
 
 3. Mysql
 
 
-Instalação:
+__Instalação:__
 
 
 1. clone o repositorio com
